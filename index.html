@@ -113,8 +113,14 @@
   .b-team.tbd{color:#334155;font-style:italic;}
   .b-score{margin-left:auto;font-size:13px;font-weight:900;color:var(--gold);}
   .b-sep{height:1px;background:rgba(255,255,255,.05);margin:2px 0;}
+  .b-tab{display:block;text-align:center;font-size:9px;color:#ef4444;font-family:'Inter',sans-serif;font-weight:700;letter-spacing:1px;margin-top:4px;}
   /* ADMIN */
   .admin-card{border-radius:11px;padding:12px 16px;background:rgba(245,158,11,.03);border:1px solid rgba(245,158,11,.1);margin-bottom:10px;}
+  .draw-winner-box{margin-top:12px;padding:12px;border-radius:9px;background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);}
+  .draw-winner-label{font-size:12px;color:#fca5a5;font-family:'Inter',sans-serif;margin-bottom:10px;}
+  .draw-winner-options{display:flex;gap:8px;flex-wrap:wrap;}
+  .draw-btn{padding:8px 16px;border-radius:8px;border:2px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:#94a3b8;cursor:pointer;font-size:14px;font-weight:700;font-family:'Inter',sans-serif;}
+  .draw-btn.selected{border-color:var(--gold);background:rgba(245,158,11,.15);color:var(--gold);}
   /* LOADING */
   #loading-screen{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;}
   .loading-ball{font-size:56px;animation:spin 1s linear infinite;}
@@ -365,6 +371,9 @@ function getWinner(matchId){
   if(isNaN(rh)||isNaN(ra)) return null;
   if(rh>ra) return m.home;
   if(ra>rh) return m.away;
+  // Match nul au temps réglementaire : vainqueur précisé manuellement (tirs au but / prolongations)
+  if(res.winner==="home") return m.home;
+  if(res.winner==="away") return m.away;
   return null;
 }
 
@@ -560,6 +569,7 @@ window.renderBracket=function(){
       div.className="b-match"+(res?" done":"");
       const hs=res?res.home:"", as=res?res.away:"";
       const hw=w===match.home, aw=w===match.away;
+      const tab = res && res.winner ? `<span class="b-tab">TAB</span>` : "";
       div.innerHTML=`
         <div class="b-team ${hw?"win":res?"lose":match.home==="?"?"tbd":""}">
           <span>${FLAGS[match.home]||"🏳️"}</span><span>${match.home}</span>
@@ -569,7 +579,7 @@ window.renderBracket=function(){
         <div class="b-team ${aw?"win":res?"lose":match.away==="?"?"tbd":""}">
           <span>${FLAGS[match.away]||"🏳️"}</span><span>${match.away}</span>
           ${res?`<span class="b-score">${as}</span>`:""}
-        </div>`;
+        </div>${tab}`;
       col.appendChild(div);
     });
     wrap.appendChild(col);
@@ -592,6 +602,7 @@ function renderAdminMatches(){
   const container=document.getElementById("admin-matches"); container.innerHTML="";
   MATCHES.filter(m=>m.round===selRoundProno).forEach(match=>{
     const res=results[match.id]||{};
+    const isDraw = res.home!==undefined && res.away!==undefined && res.home!=="" && res.away!=="" && parseInt(res.home)===parseInt(res.away);
     const card=document.createElement("div"); card.className="admin-card";
     card.innerHTML=`
       <div class="match-label">${match.label} — ${match.home} vs ${match.away}</div>
@@ -603,10 +614,26 @@ function renderAdminMatches(){
           <input class="score-input adm" type="number" min="0" max="20" value="${res.away??''}" placeholder="–" oninput="setResult(${match.id},'away',this.value)">
         </div>
         <div class="team-block right"><span class="team-name">${match.away}</span><span class="team-flag">${FLAGS[match.away]||"🏳️"}</span></div>
-      </div>`;
+      </div>
+      ${isDraw ? `
+      <div class="draw-winner-box">
+        <div class="draw-winner-label">⚽ Match nul (TR) — Qui se qualifie ? (tirs au but / prolongations)</div>
+        <div class="draw-winner-options">
+          <button class="draw-btn ${res.winner==='home'?'selected':''}" onclick="setWinner(${match.id},'home')">${FLAGS[match.home]||"🏳️"} ${match.home}</button>
+          <button class="draw-btn ${res.winner==='away'?'selected':''}" onclick="setWinner(${match.id},'away')">${FLAGS[match.away]||"🏳️"} ${match.away}</button>
+        </div>
+      </div>` : ''}`;
     container.appendChild(card);
   });
 }
+
+window.setWinner=async function(id,side){
+  if(!results[id]) results[id]={};
+  results[id].winner=side;
+  await save("results",results);
+  propagateWinners();
+  renderAdminMatches();
+};
 
 window.setResult=async function(id,side,val){
   if(!results[id]) results[id]={};
