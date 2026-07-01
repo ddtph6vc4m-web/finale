@@ -277,37 +277,45 @@ const ROUNDS_LABEL = { r16:"16es de finale", qf:"Quarts de finale", sf:"Demi-fin
 const ADMIN_PWD = "worldcup2026";
 
 // Structure du bracket (id fixe, équipes fixes pour r16, TBD pour la suite)
+// Structure : 16 matchs de 16es → 8 quarts → 4 demies → 1 finale
+// IDs 1-16 : 16es de finale
+// IDs 17-24 : Quarts de finale (vainqueurs des 16es)
+// IDs 25-28 : Demi-finales (vainqueurs des quarts)
+// ID 29    : Finale
 let MATCHES = [
-  {id:1, round:"r16", label:"Match 1",  home:"Allemagne",        away:"Paraguay",           next:17, slot:"home"},
-  {id:2, round:"r16", label:"Match 2",  home:"France",           away:"Suède",              next:17, slot:"away"},
-  {id:3, round:"r16", label:"Match 3",  home:"Afrique du Sud",   away:"Canada",             next:18, slot:"home"},
-  {id:4, round:"r16", label:"Match 4",  home:"Pays-Bas",         away:"Maroc",              next:18, slot:"away"},
-  {id:5, round:"r16", label:"Match 5",  home:"Portugal",         away:"Croatie",            next:19, slot:"home"},
-  {id:6, round:"r16", label:"Match 6",  home:"Espagne",          away:"Autriche",           next:19, slot:"away"},
-  {id:7, round:"r16", label:"Match 7",  home:"États-Unis",       away:"Bosnie-Herzégovine", next:20, slot:"home"},
-  {id:8, round:"r16", label:"Match 8",  home:"Belgique",         away:"Sénégal",            next:20, slot:"away"},
-  {id:9, round:"r16", label:"Match 9",  home:"Brésil",           away:"Japon",              next:21, slot:"home"},
-  {id:10,round:"r16", label:"Match 10", home:"Côte d'Ivoire",    away:"Norvège",            next:21, slot:"away"},
-  {id:11,round:"r16", label:"Match 11", home:"Mexique",          away:"Équateur",           next:22, slot:"home"},
-  {id:12,round:"r16", label:"Match 12", home:"Angleterre",       away:"RD Congo",           next:22, slot:"away"},
-  {id:13,round:"r16", label:"Match 13", home:"Argentine",        away:"Cap-Vert",           next:23, slot:"home"},
-  {id:14,round:"r16", label:"Match 14", home:"Australie",        away:"Égypte",             next:23, slot:"away"},
-  {id:15,round:"r16", label:"Match 15", home:"Suisse",           away:"Algérie",            next:24, slot:"home"},
-  {id:16,round:"r16", label:"Match 16", home:"Colombie",         away:"Ghana",              next:24, slot:"away"},
-  {id:17,round:"qf",  label:"QF 1",     home:"?",away:"?",       next:25, slot:"home"},
-  {id:18,round:"qf",  label:"QF 2",     home:"?",away:"?",       next:25, slot:"away"},
-  {id:19,round:"qf",  label:"QF 3",     home:"?",away:"?",       next:26, slot:"home"},
-  {id:20,round:"qf",  label:"QF 4",     home:"?",away:"?",       next:26, slot:"away"},
-  {id:21,round:"qf",  label:"QF 5",     home:"?",away:"?",       next:27, slot:"home"},
-  {id:22,round:"qf",  label:"QF 6",     home:"?",away:"?",       next:27, slot:"away"},
-  {id:23,round:"qf",  label:"QF 7",     home:"?",away:"?",       next:28, slot:"home"},
-  {id:24,round:"qf",  label:"QF 8",     home:"?",away:"?",       next:28, slot:"away"},
-  {id:25,round:"sf",  label:"Demie 1",  home:"?",away:"?",       next:29, slot:"home"},
-  {id:26,round:"sf",  label:"Demie 2",  home:"?",away:"?",       next:29, slot:"away"},
-  {id:27,round:"sf",  label:"Demie 3",  home:"?",away:"?",       next:30, slot:"home"},
-  {id:28,round:"sf",  label:"Demie 4",  home:"?",away:"?",       next:30, slot:"away"},
-  {id:29,round:"f",   label:"Finale A", home:"?",away:"?",       next:null,slot:null},
-  {id:30,round:"f",   label:"Finale B", home:"?",away:"?",       next:null,slot:null},
+  // 16es de finale
+  {id:1,  round:"r16", label:"1/8 — Match 1",  home:"Allemagne",        away:"Paraguay",           next:17, slot:"home"},
+  {id:2,  round:"r16", label:"1/8 — Match 2",  home:"France",           away:"Suède",              next:17, slot:"away"},
+  {id:3,  round:"r16", label:"1/8 — Match 3",  home:"Afrique du Sud",   away:"Canada",             next:18, slot:"home"},
+  {id:4,  round:"r16", label:"1/8 — Match 4",  home:"Pays-Bas",         away:"Maroc",              next:18, slot:"away"},
+  {id:5,  round:"r16", label:"1/8 — Match 5",  home:"Portugal",         away:"Croatie",            next:19, slot:"home"},
+  {id:6,  round:"r16", label:"1/8 — Match 6",  home:"Espagne",          away:"Autriche",           next:19, slot:"away"},
+  {id:7,  round:"r16", label:"1/8 — Match 7",  home:"États-Unis",       away:"Bosnie-Herzégovine", next:20, slot:"home"},
+  {id:8,  round:"r16", label:"1/8 — Match 8",  home:"Belgique",         away:"Sénégal",            next:20, slot:"away"},
+  {id:9,  round:"r16", label:"1/8 — Match 9",  home:"Brésil",           away:"Japon",              next:21, slot:"home"},
+  {id:10, round:"r16", label:"1/8 — Match 10", home:"Côte d'Ivoire",    away:"Norvège",            next:21, slot:"away"},
+  {id:11, round:"r16", label:"1/8 — Match 11", home:"Mexique",          away:"Équateur",           next:22, slot:"home"},
+  {id:12, round:"r16", label:"1/8 — Match 12", home:"Angleterre",       away:"RD Congo",           next:22, slot:"away"},
+  {id:13, round:"r16", label:"1/8 — Match 13", home:"Argentine",        away:"Cap-Vert",           next:23, slot:"home"},
+  {id:14, round:"r16", label:"1/8 — Match 14", home:"Australie",        away:"Égypte",             next:23, slot:"away"},
+  {id:15, round:"r16", label:"1/8 — Match 15", home:"Suisse",           away:"Algérie",            next:24, slot:"home"},
+  {id:16, round:"r16", label:"1/8 — Match 16", home:"Colombie",         away:"Ghana",              next:24, slot:"away"},
+  // Quarts de finale — 8 matchs → 4 vainqueurs
+  {id:17, round:"qf",  label:"1/4 — QF 1",     home:"?", away:"?",      next:25, slot:"home"},
+  {id:18, round:"qf",  label:"1/4 — QF 2",     home:"?", away:"?",      next:25, slot:"away"},
+  {id:19, round:"qf",  label:"1/4 — QF 3",     home:"?", away:"?",      next:26, slot:"home"},
+  {id:20, round:"qf",  label:"1/4 — QF 4",     home:"?", away:"?",      next:26, slot:"away"},
+  {id:21, round:"qf",  label:"1/4 — QF 5",     home:"?", away:"?",      next:27, slot:"home"},
+  {id:22, round:"qf",  label:"1/4 — QF 6",     home:"?", away:"?",      next:27, slot:"away"},
+  {id:23, round:"qf",  label:"1/4 — QF 7",     home:"?", away:"?",      next:28, slot:"home"},
+  {id:24, round:"qf",  label:"1/4 — QF 8",     home:"?", away:"?",      next:28, slot:"away"},
+  // Demi-finales — 4 matchs → 2 vainqueurs
+  {id:25, round:"sf",  label:"1/2 — Demie 1",  home:"?", away:"?",      next:29, slot:"home"},
+  {id:26, round:"sf",  label:"1/2 — Demie 2",  home:"?", away:"?",      next:29, slot:"away"},
+  {id:27, round:"sf",  label:"1/2 — Demie 3",  home:"?", away:"?",      next:29, slot:null},
+  {id:28, round:"sf",  label:"1/2 — Demie 4",  home:"?", away:"?",      next:29, slot:null},
+  // Finale
+  {id:29, round:"f",   label:"⭐ FINALE",       home:"?", away:"?",      next:null, slot:null},
 ];
 
 function computeScore(pro, res) {
@@ -524,8 +532,10 @@ window.renderLeaderboard=function(){
   lb.forEach((p,i)=>{
     const row=document.createElement("div");
     row.className="lb-row"+(p.id===currentUserId?" me":"");
-    const m=i===0?"🥇":i===1?"🥈":i===2?"🥉":`#${i+1}`;
-    row.innerHTML=`<div class="lb-rank">${m}</div><div class="lb-name">${p.name}</div><div class="lb-stats"><span class="lb-stat">🎯 ${p.exact}</span><span class="lb-stat">✅ ${p.good}</span></div><div class="lb-right"><div class="lb-total">${p.total} pts</div><div class="lb-sub">Poules : ${p.base} · Finale : ${p.fin}</div></div>`;
+    const isLast=i===lb.length-1&&lb.length>1;
+    const m=i===0?"🥇":i===1?"🥈":i===2?"🥉":isLast?"🥄":`#${i+1}`;
+    const dname=p.name==="Elgreco"?"Elgreco 🕶️ tonton bogoss":p.name;
+    row.innerHTML=`<div class="lb-rank">${m}</div><div class="lb-name">${dname}</div><div class="lb-stats"><span class="lb-stat">🎯 ${p.exact}</span><span class="lb-stat">✅ ${p.good}</span></div><div class="lb-right"><div class="lb-total">${p.total} pts</div><div class="lb-sub">Poules : ${p.base} · Finale : ${p.fin}</div></div>`;
     el.appendChild(row);
   });
   renderRoundTabs("lb-round-tabs", selRoundLB, g=>{ selRoundLB=g; renderCompareTable(); });
