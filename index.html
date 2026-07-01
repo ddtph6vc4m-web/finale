@@ -24,7 +24,6 @@
   main{position:relative;z-index:1;padding:24px 16px;max-width:1000px;margin:0 auto;}
   .screen{display:none;}.screen.active{display:block;}
   #toast{position:fixed;top:72px;left:50%;transform:translateX(-50%);padding:10px 28px;border-radius:999px;color:#fff;font-size:14px;font-weight:700;z-index:9999;box-shadow:0 4px 24px rgba(0,0,0,.5);font-family:'Inter',sans-serif;white-space:nowrap;display:none;}
-  /* HOME */
   .home-wrap{text-align:center;padding-top:40px;}
   .hero-title{font-size:44px;font-weight:900;letter-spacing:4px;color:#fff;margin-bottom:8px;}
   .hero-sub{color:var(--muted);font-size:16px;font-family:'Inter',sans-serif;margin-bottom:24px;}
@@ -41,7 +40,6 @@
   .card-icon{font-size:34px;margin-bottom:8px;}
   .card-title{font-size:16px;font-weight:900;letter-spacing:2px;color:var(--gold);margin-bottom:4px;}
   .card-desc{font-size:11px;color:var(--muted);font-family:'Inter',sans-serif;}
-  /* FORM */
   .center-box{max-width:460px;margin:40px auto;text-align:center;}
   .page-title{font-size:28px;font-weight:900;letter-spacing:2px;margin-bottom:14px;color:var(--gold);}
   .hint{color:#334155;font-size:14px;font-family:'Inter',sans-serif;margin-bottom:20px;}
@@ -50,11 +48,9 @@
   .btn-primary{width:100%;padding:13px;border-radius:9px;border:none;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#020818;font-size:17px;font-weight:900;cursor:pointer;letter-spacing:2px;font-family:'Barlow Condensed',sans-serif;}
   .exist-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;}
   .exist-chip{padding:5px 13px;border-radius:999px;cursor:pointer;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#64748b;font-size:13px;font-family:'Inter',sans-serif;}
-  /* TABS */
   .round-tabs{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap;}
   .round-tab{padding:6px 16px;border-radius:7px;font-size:13px;cursor:pointer;font-family:'Inter',sans-serif;border:1px solid rgba(255,255,255,.08);background:transparent;color:var(--muted);font-weight:600;}
   .round-tab.active{background:rgba(245,158,11,.15);border-color:rgba(245,158,11,.5);color:var(--gold);}
-  /* MATCH */
   .match-list{display:flex;flex-direction:column;gap:10px;}
   .match-card{border-radius:11px;padding:14px 16px;background:var(--surface);border:1px solid var(--border);position:relative;}
   .match-card.locked{background:rgba(71,85,105,.05);border-color:rgba(71,85,105,.12);opacity:.88;}
@@ -77,19 +73,22 @@
   .pts-badge{position:absolute;top:6px;right:32px;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;}
   .lock-icon{position:absolute;top:6px;right:10px;font-size:13px;opacity:.4;}
   .tbd-msg{text-align:right;margin-top:8px;font-size:12px;color:#334155;font-family:'Inter',sans-serif;}
-  /* LB */
+  .draw-box{margin-top:12px;padding:12px;border-radius:9px;background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);}
+  .draw-label{font-size:12px;color:#fca5a5;font-family:'Inter',sans-serif;margin-bottom:10px;}
+  .draw-options{display:flex;gap:8px;flex-wrap:wrap;}
+  .draw-btn{padding:8px 16px;border-radius:8px;border:2px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:#94a3b8;cursor:pointer;font-size:14px;font-weight:700;font-family:'Inter',sans-serif;}
+  .draw-btn.selected{border-color:var(--gold);background:rgba(245,158,11,.15);color:var(--gold);}
   .refresh-btn{padding:5px 14px;border-radius:7px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);color:var(--muted);cursor:pointer;font-size:13px;font-family:'Inter',sans-serif;margin-bottom:18px;}
   .lb-list{display:flex;flex-direction:column;gap:8px;margin-bottom:32px;}
   .lb-row{display:flex;align-items:center;gap:14px;padding:12px 18px;border-radius:10px;background:var(--surface);border:1px solid var(--border);font-family:'Inter',sans-serif;}
   .lb-row.me{border-color:rgba(245,158,11,.35);background:rgba(245,158,11,.05);}
   .lb-rank{font-size:22px;min-width:36px;text-align:center;}
-  .lb-name{flex:1;font-size:18px;font-weight:700;letter-spacing:1px;}
+  .lb-name{flex:1;font-size:17px;font-weight:700;letter-spacing:1px;}
   .lb-right{display:flex;flex-direction:column;align-items:flex-end;gap:2px;}
   .lb-total{font-size:22px;font-weight:900;color:var(--gold);}
   .lb-sub{font-size:11px;color:#334155;}
   .lb-stats{display:flex;gap:10px;}
   .lb-stat{font-size:12px;color:var(--muted);}
-  /* TABLE */
   .section-title{font-size:18px;font-weight:900;letter-spacing:2px;color:#64748b;margin:24px 0 12px;}
   .compare-wrap{overflow-x:auto;}
   table{width:100%;border-collapse:collapse;font-family:'Inter',sans-serif;font-size:13px;}
@@ -100,9 +99,8 @@
   td.pts1{background:rgba(34,197,94,.15);color:var(--green);text-align:center;font-weight:700;}
   td.pts0{background:rgba(239,68,68,.1);color:var(--red);text-align:center;}
   td.unl{opacity:.4;text-align:center;}
-  /* BRACKET */
   .bracket-wrap{overflow-x:auto;padding:8px 0;}
-  .bracket{display:flex;gap:4px;min-width:820px;}
+  .bracket{display:flex;gap:4px;min-width:860px;}
   .b-round{display:flex;flex-direction:column;justify-content:space-around;flex:1;padding:0 4px;}
   .b-round-title{text-align:center;font-size:11px;font-weight:900;letter-spacing:2px;color:var(--muted);margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.05);}
   .b-match{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:7px 10px;margin:3px 0;}
@@ -114,20 +112,13 @@
   .b-score{margin-left:auto;font-size:13px;font-weight:900;color:var(--gold);}
   .b-sep{height:1px;background:rgba(255,255,255,.05);margin:2px 0;}
   .b-tab{display:block;text-align:center;font-size:9px;color:#ef4444;font-family:'Inter',sans-serif;font-weight:700;letter-spacing:1px;margin-top:4px;}
-  /* ADMIN */
   .admin-card{border-radius:11px;padding:12px 16px;background:rgba(245,158,11,.03);border:1px solid rgba(245,158,11,.1);margin-bottom:10px;}
-  .draw-winner-box{margin-top:12px;padding:12px;border-radius:9px;background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);}
-  .draw-winner-label{font-size:12px;color:#fca5a5;font-family:'Inter',sans-serif;margin-bottom:10px;}
-  .draw-winner-options{display:flex;gap:8px;flex-wrap:wrap;}
-  .draw-btn{padding:8px 16px;border-radius:8px;border:2px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:#94a3b8;cursor:pointer;font-size:14px;font-weight:700;font-family:'Inter',sans-serif;}
-  .draw-btn.selected{border-color:var(--gold);background:rgba(245,158,11,.15);color:var(--gold);}
-  /* LOADING */
   #loading-screen{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;}
   .loading-ball{font-size:56px;animation:spin 1s linear infinite;}
   @keyframes spin{to{transform:rotate(360deg);}}
   .loading-text{color:#334155;font-family:'Inter',sans-serif;font-size:16px;margin-top:16px;}
   footer{position:relative;z-index:1;text-align:center;padding:20px;color:#0f172a;font-size:12px;font-family:'Inter',sans-serif;}
-  @media(max-width:600px){.hero-title{font-size:30px;}.team-name{font-size:12px;}input.score-input{width:42px;height:42px;font-size:18px;}.lb-name{font-size:14px;}}
+  @media(max-width:600px){.hero-title{font-size:30px;}.team-name{font-size:12px;}input.score-input{width:42px;height:42px;font-size:18px;}.lb-name{font-size:13px;}}
 </style>
 </head>
 <body>
@@ -149,7 +140,7 @@
   <nav>
     <span id="user-tag" class="user-tag" style="display:none"></span>
     <button class="nav-btn" id="my-pronos-btn" style="display:none" onclick="showScreen('pronostics')">📋 Mes pronos</button>
-    <button class="nav-btn" onclick="showScreen('bracket')">🗂 Tableau</button>
+    <button class="nav-btn" onclick="showScreen('bracket');renderBracket()">🗂 Tableau</button>
     <button class="nav-btn" onclick="showScreen('leaderboard');renderLeaderboard()">🏅 Classement</button>
     <button class="nav-btn nav-btn-admin" id="admin-nav-btn" style="display:none" onclick="showScreen('admin')">⚙️ Admin</button>
     <button class="nav-btn-ghost" id="admin-login-btn" onclick="showScreen('adminLogin')">Admin</button>
@@ -157,12 +148,11 @@
 </header>
 
 <main>
-  <!-- HOME -->
   <div id="screen-home" class="screen active">
     <div class="home-wrap">
       <div style="font-size:60px;margin-bottom:16px">🏆⚽🔥</div>
       <h1 class="hero-title">PHASE FINALE</h1>
-      <p class="hero-sub">Coupe du Monde 2026 · 16es de finale → Finale · 19 juillet</p>
+      <p class="hero-sub">Coupe du Monde 2026 · 16es → Quarts → Demies → Finale · 19 juillet</p>
       <div class="rules">
         <span class="chip">🎯 Score exact = <b>3 pts</b></span>
         <span class="chip">✅ Bon vainqueur = <b>1 pt</b></span>
@@ -170,22 +160,21 @@
       <div class="poules-banner">
         <h3>📊 Classement après la Phase de Poules</h3>
         <div class="poules-scores">
-          <span class="pscore">🥇 Elgreco — <b>68 pts</b></span>
+          <span class="pscore">🥇 Elgreco 🕶️ tonton bogoss — <b>68 pts</b></span>
           <span class="pscore">🥈 Yannis — <b>59 pts</b></span>
           <span class="pscore">🥉 Tatia — <b>58 pts</b></span>
           <span class="pscore">4️⃣ Matthieu — <b>50 pts</b></span>
-          <span class="pscore">5️⃣ Martine — <b>49 pts</b></span>
+          <span class="pscore">🥄 Martine — <b>49 pts</b></span>
         </div>
       </div>
       <div class="home-cards">
         <div class="card" onclick="showScreen('join')"><div class="card-icon">✍️</div><div class="card-title">Participer</div><div class="card-desc">Saisis tes pronostics</div></div>
-        <div class="card" onclick="showScreen('bracket')"><div class="card-icon">🗂</div><div class="card-title">Tableau</div><div class="card-desc">Bracket complet</div></div>
+        <div class="card" onclick="showScreen('bracket');renderBracket()"><div class="card-icon">🗂</div><div class="card-title">Tableau</div><div class="card-desc">Bracket complet</div></div>
         <div class="card" onclick="showScreen('leaderboard');renderLeaderboard()"><div class="card-icon">🏅</div><div class="card-title">Classement</div><div class="card-desc">Scores cumulés</div></div>
       </div>
     </div>
   </div>
 
-  <!-- JOIN -->
   <div id="screen-join" class="screen">
     <div class="center-box">
       <h2 class="page-title">Rejoindre</h2>
@@ -199,20 +188,17 @@
     </div>
   </div>
 
-  <!-- PRONOSTICS -->
   <div id="screen-pronostics" class="screen">
     <h2 class="page-title" id="prono-title">Mes Pronostics</h2>
     <div class="round-tabs" id="round-tabs"></div>
     <div class="match-list" id="prono-matches"></div>
   </div>
 
-  <!-- BRACKET -->
   <div id="screen-bracket" class="screen">
     <h2 class="page-title">🗂 Tableau Phase Finale</h2>
     <div class="bracket-wrap"><div class="bracket" id="bracket-visual"></div></div>
   </div>
 
-  <!-- LEADERBOARD -->
   <div id="screen-leaderboard" class="screen">
     <h2 class="page-title">🏅 Classement Général</h2>
     <p style="color:#334155;font-size:13px;font-family:'Inter',sans-serif;margin-bottom:16px">Points poules + phase finale cumulés</p>
@@ -223,7 +209,6 @@
     <div class="compare-wrap"><table id="compare-table"><thead></thead><tbody></tbody></table></div>
   </div>
 
-  <!-- ADMIN LOGIN -->
   <div id="screen-adminLogin" class="screen">
     <div class="center-box">
       <h2 class="page-title">⚙️ Admin</h2>
@@ -233,7 +218,6 @@
     </div>
   </div>
 
-  <!-- ADMIN -->
   <div id="screen-admin" class="screen">
     <h2 class="page-title">⚙️ Résultats officiels</h2>
     <div class="round-tabs" id="admin-round-tabs"></div>
@@ -258,9 +242,7 @@ const firebaseConfig = {
 };
 
 // ── SCORES POULES FIGÉS ──
-const POULES = {
-  "Matthieu": 50, "Yannis": 59, "Tatia": 58, "Elgreco": 68, "Martine": 49
-};
+const POULES = { "Matthieu":50, "Yannis":59, "Tatia":58, "Elgreco":68, "Martine":49 };
 
 const FLAGS = {
   "Allemagne":"🇩🇪","Paraguay":"🇵🇾","France":"🇫🇷","Suède":"🇸🇪",
@@ -273,50 +255,65 @@ const FLAGS = {
   "Suisse":"🇨🇭","Algérie":"🇩🇿","Colombie":"🇨🇴","Ghana":"🇬🇭",
 };
 
-const ROUNDS_LABEL = { r16:"16es de finale", qf:"Quarts de finale", sf:"Demi-finales", f:"Finale" };
-const ADMIN_PWD = "worldcup2026";
+// ── STRUCTURE DU TOURNOI ──
+// 16 matchs de 16es → 8 quarts → 4 demies → 1 finale = 29 matchs
+// Propagation : vainqueur de match X alimente le slot home/away du match next
+const ROUNDS_LABEL = {
+  r16: "16es de finale",
+  qf:  "Quarts de finale",
+  sf:  "Demi-finales",
+  f:   "Finale"
+};
 
-// Structure du bracket (id fixe, équipes fixes pour r16, TBD pour la suite)
-// Structure : 16 matchs de 16es → 8 quarts → 4 demies → 1 finale
-// IDs 1-16 : 16es de finale
-// IDs 17-24 : Quarts de finale (vainqueurs des 16es)
-// IDs 25-28 : Demi-finales (vainqueurs des quarts)
-// ID 29    : Finale
 let MATCHES = [
-  // 16es de finale
-  {id:1,  round:"r16", label:"1/8 — Match 1",  home:"Allemagne",        away:"Paraguay",           next:17, slot:"home"},
-  {id:2,  round:"r16", label:"1/8 — Match 2",  home:"France",           away:"Suède",              next:17, slot:"away"},
-  {id:3,  round:"r16", label:"1/8 — Match 3",  home:"Afrique du Sud",   away:"Canada",             next:18, slot:"home"},
-  {id:4,  round:"r16", label:"1/8 — Match 4",  home:"Pays-Bas",         away:"Maroc",              next:18, slot:"away"},
-  {id:5,  round:"r16", label:"1/8 — Match 5",  home:"Portugal",         away:"Croatie",            next:19, slot:"home"},
-  {id:6,  round:"r16", label:"1/8 — Match 6",  home:"Espagne",          away:"Autriche",           next:19, slot:"away"},
-  {id:7,  round:"r16", label:"1/8 — Match 7",  home:"États-Unis",       away:"Bosnie-Herzégovine", next:20, slot:"home"},
-  {id:8,  round:"r16", label:"1/8 — Match 8",  home:"Belgique",         away:"Sénégal",            next:20, slot:"away"},
-  {id:9,  round:"r16", label:"1/8 — Match 9",  home:"Brésil",           away:"Japon",              next:21, slot:"home"},
-  {id:10, round:"r16", label:"1/8 — Match 10", home:"Côte d'Ivoire",    away:"Norvège",            next:21, slot:"away"},
-  {id:11, round:"r16", label:"1/8 — Match 11", home:"Mexique",          away:"Équateur",           next:22, slot:"home"},
-  {id:12, round:"r16", label:"1/8 — Match 12", home:"Angleterre",       away:"RD Congo",           next:22, slot:"away"},
-  {id:13, round:"r16", label:"1/8 — Match 13", home:"Argentine",        away:"Cap-Vert",           next:23, slot:"home"},
-  {id:14, round:"r16", label:"1/8 — Match 14", home:"Australie",        away:"Égypte",             next:23, slot:"away"},
-  {id:15, round:"r16", label:"1/8 — Match 15", home:"Suisse",           away:"Algérie",            next:24, slot:"home"},
-  {id:16, round:"r16", label:"1/8 — Match 16", home:"Colombie",         away:"Ghana",              next:24, slot:"away"},
-  // Quarts de finale — 8 matchs → 4 vainqueurs
-  {id:17, round:"qf",  label:"1/4 — QF 1",     home:"?", away:"?",      next:25, slot:"home"},
-  {id:18, round:"qf",  label:"1/4 — QF 2",     home:"?", away:"?",      next:25, slot:"away"},
-  {id:19, round:"qf",  label:"1/4 — QF 3",     home:"?", away:"?",      next:26, slot:"home"},
-  {id:20, round:"qf",  label:"1/4 — QF 4",     home:"?", away:"?",      next:26, slot:"away"},
-  {id:21, round:"qf",  label:"1/4 — QF 5",     home:"?", away:"?",      next:27, slot:"home"},
-  {id:22, round:"qf",  label:"1/4 — QF 6",     home:"?", away:"?",      next:27, slot:"away"},
-  {id:23, round:"qf",  label:"1/4 — QF 7",     home:"?", away:"?",      next:28, slot:"home"},
-  {id:24, round:"qf",  label:"1/4 — QF 8",     home:"?", away:"?",      next:28, slot:"away"},
-  // Demi-finales — 4 matchs → 2 vainqueurs
-  {id:25, round:"sf",  label:"1/2 — Demie 1",  home:"?", away:"?",      next:29, slot:"home"},
-  {id:26, round:"sf",  label:"1/2 — Demie 2",  home:"?", away:"?",      next:29, slot:"away"},
-  {id:27, round:"sf",  label:"1/2 — Demie 3",  home:"?", away:"?",      next:29, slot:null},
-  {id:28, round:"sf",  label:"1/2 — Demie 4",  home:"?", away:"?",      next:29, slot:null},
-  // Finale
+  // ── 16es de finale (matchs 1-16) ──
+  {id:1,  round:"r16", label:"16e — Match 1",  home:"Allemagne",        away:"Paraguay",           next:17, slot:"home"},
+  {id:2,  round:"r16", label:"16e — Match 2",  home:"France",           away:"Suède",              next:17, slot:"away"},
+  {id:3,  round:"r16", label:"16e — Match 3",  home:"Afrique du Sud",   away:"Canada",             next:18, slot:"home"},
+  {id:4,  round:"r16", label:"16e — Match 4",  home:"Pays-Bas",         away:"Maroc",              next:18, slot:"away"},
+  {id:5,  round:"r16", label:"16e — Match 5",  home:"Portugal",         away:"Croatie",            next:19, slot:"home"},
+  {id:6,  round:"r16", label:"16e — Match 6",  home:"Espagne",          away:"Autriche",           next:19, slot:"away"},
+  {id:7,  round:"r16", label:"16e — Match 7",  home:"États-Unis",       away:"Bosnie-Herzégovine", next:20, slot:"home"},
+  {id:8,  round:"r16", label:"16e — Match 8",  home:"Belgique",         away:"Sénégal",            next:20, slot:"away"},
+  {id:9,  round:"r16", label:"16e — Match 9",  home:"Brésil",           away:"Japon",              next:21, slot:"home"},
+  {id:10, round:"r16", label:"16e — Match 10", home:"Côte d'Ivoire",    away:"Norvège",            next:21, slot:"away"},
+  {id:11, round:"r16", label:"16e — Match 11", home:"Mexique",          away:"Équateur",           next:22, slot:"home"},
+  {id:12, round:"r16", label:"16e — Match 12", home:"Angleterre",       away:"RD Congo",           next:22, slot:"away"},
+  {id:13, round:"r16", label:"16e — Match 13", home:"Argentine",        away:"Cap-Vert",           next:23, slot:"home"},
+  {id:14, round:"r16", label:"16e — Match 14", home:"Australie",        away:"Égypte",             next:23, slot:"away"},
+  {id:15, round:"r16", label:"16e — Match 15", home:"Suisse",           away:"Algérie",            next:24, slot:"home"},
+  {id:16, round:"r16", label:"16e — Match 16", home:"Colombie",         away:"Ghana",              next:24, slot:"away"},
+  // ── Quarts de finale (matchs 17-24) ──
+  // Match 17 : vainqueur M1 vs vainqueur M2 → alimente SF match 25
+  {id:17, round:"qf",  label:"Quart — QF 1",   home:"?", away:"?",      next:25, slot:"home"},
+  // Match 18 : vainqueur M3 vs vainqueur M4 → alimente SF match 25
+  {id:18, round:"qf",  label:"Quart — QF 2",   home:"?", away:"?",      next:25, slot:"away"},
+  // Match 19 : vainqueur M5 vs vainqueur M6 → alimente SF match 26
+  {id:19, round:"qf",  label:"Quart — QF 3",   home:"?", away:"?",      next:26, slot:"home"},
+  // Match 20 : vainqueur M7 vs vainqueur M8 → alimente SF match 26
+  {id:20, round:"qf",  label:"Quart — QF 4",   home:"?", away:"?",      next:26, slot:"away"},
+  // Match 21 : vainqueur M9 vs vainqueur M10 → alimente SF match 27
+  {id:21, round:"qf",  label:"Quart — QF 5",   home:"?", away:"?",      next:27, slot:"home"},
+  // Match 22 : vainqueur M11 vs vainqueur M12 → alimente SF match 27
+  {id:22, round:"qf",  label:"Quart — QF 6",   home:"?", away:"?",      next:27, slot:"away"},
+  // Match 23 : vainqueur M13 vs vainqueur M14 → alimente SF match 28
+  {id:23, round:"qf",  label:"Quart — QF 7",   home:"?", away:"?",      next:28, slot:"home"},
+  // Match 24 : vainqueur M15 vs vainqueur M16 → alimente SF match 28
+  {id:24, round:"qf",  label:"Quart — QF 8",   home:"?", away:"?",      next:28, slot:"away"},
+  // ── Demi-finales (matchs 25-28) ──
+  // Match 25 : vainqueur QF1 vs vainqueur QF2 → alimente Finale match 29
+  {id:25, round:"sf",  label:"Demie — SF 1",   home:"?", away:"?",      next:29, slot:"home"},
+  // Match 26 : vainqueur QF3 vs vainqueur QF4 → alimente Finale match 29
+  {id:26, round:"sf",  label:"Demie — SF 2",   home:"?", away:"?",      next:29, slot:"away"},
+  // Match 27 : vainqueur QF5 vs vainqueur QF6 → alimente Finale match 29
+  {id:27, round:"sf",  label:"Demie — SF 3",   home:"?", away:"?",      next:29, slot:null},
+  // Match 28 : vainqueur QF7 vs vainqueur QF8 → alimente Finale match 29
+  {id:28, round:"sf",  label:"Demie — SF 4",   home:"?", away:"?",      next:29, slot:null},
+  // ── Finale (match 29) ──
   {id:29, round:"f",   label:"⭐ FINALE",       home:"?", away:"?",      next:null, slot:null},
 ];
+
+const ADMIN_PWD = "worldcup2026";
 
 function computeScore(pro, res) {
   if(!res||res.home===undefined||res.away===undefined) return null;
@@ -334,7 +331,7 @@ let currentUserId=null, adminMode=false;
 let selRoundProno="r16", selRoundLB="r16";
 let localPro={};
 
-// FIREBASE — même nœud wc2026 mais sous-clé "finale"
+// FIREBASE — nœud wc2026/finale
 const fbApp = initializeApp(firebaseConfig);
 const db = getDatabase(fbApp);
 const DB_PATH = "wc2026/finale";
@@ -344,7 +341,6 @@ onValue(ref(db, DB_PATH), snap => {
   participants = data.participants||{};
   results      = data.results||{};
   locked       = data.locked||{};
-  // Initialiser les participants depuis les scores poules si vide
   if(Object.keys(participants).length===0){
     Object.keys(POULES).forEach(name=>{
       const id="p_"+name.toLowerCase();
@@ -379,18 +375,18 @@ function getWinner(matchId){
   if(isNaN(rh)||isNaN(ra)) return null;
   if(rh>ra) return m.home;
   if(ra>rh) return m.away;
-  // Match nul au temps réglementaire : vainqueur précisé manuellement (tirs au but / prolongations)
+  // Égalité au temps réglementaire → vainqueur désigné manuellement (TAB/Prolongations)
   if(res.winner==="home") return m.home;
   if(res.winner==="away") return m.away;
   return null;
 }
 
 function propagateWinners(){
-  // Reset TBD
+  // Reset les équipes TBD pour les rounds > r16
   MATCHES.forEach(m=>{ if(m.round!=="r16"){ m.home="?"; m.away="?"; } });
-  // Propager
+  // Propager les vainqueurs
   MATCHES.forEach(m=>{
-    if(!m.next) return;
+    if(!m.next||!m.slot) return;
     const w=getWinner(m.id); if(!w) return;
     const next=MATCHES.find(x=>x.id===m.next);
     if(next) next[m.slot]=w;
@@ -414,11 +410,15 @@ window.showScreen=function(name){
   if(name==="bracket") renderBracket();
 };
 
+function displayName(name){
+  return name==="Elgreco" ? "Elgreco 🕶️ tonton bogoss" : name;
+}
+
 function updateExistChips(){
   const el=document.getElementById("exist-chips"); el.innerHTML="";
   Object.values(participants).forEach(p=>{
     const c=document.createElement("span");
-    c.className="exist-chip"; c.textContent=p.name;
+    c.className="exist-chip"; c.textContent=displayName(p.name);
     c.onclick=()=>document.getElementById("join-name").value=p.name;
     el.appendChild(c);
   });
@@ -438,21 +438,21 @@ function renderRoundTabs(cid, sel, fn){
 window.handleJoin=async function(){
   const name=document.getElementById("join-name").value.trim(); if(!name) return;
   const ex=Object.values(participants).find(p=>p.name.toLowerCase()===name.toLowerCase());
-  if(ex){ currentUserId=ex.id; setCurrentUser(ex); showToast(`Bienvenue ${ex.name} !`); showScreen("pronostics"); return; }
+  if(ex){ currentUserId=ex.id; setCurrentUser(ex); showToast(`Bienvenue ${displayName(ex.name)} !`); showScreen("pronostics"); return; }
   const id="p_"+Date.now();
   const np={id,name,pronostics:{}};
   participants[id]=np;
   await save("participants",participants);
   currentUserId=id; setCurrentUser(np);
-  showToast(`Bienvenue ${name} !`); showScreen("pronostics");
+  showToast(`Bienvenue ${displayName(name)} !`); showScreen("pronostics");
 };
 
 function setCurrentUser(p){
   localPro={...(p.pronostics||{})};
-  document.getElementById("user-tag").textContent=`👤 ${p.name}`;
+  document.getElementById("user-tag").textContent=`👤 ${displayName(p.name)}`;
   document.getElementById("user-tag").style.display="inline-block";
   document.getElementById("my-pronos-btn").style.display="inline-block";
-  document.getElementById("prono-title").textContent=`Mes Pronostics — ${p.name}`;
+  document.getElementById("prono-title").textContent=`Mes Pronostics — ${displayName(p.name)}`;
 }
 
 // PRONOSTICS
@@ -470,17 +470,17 @@ function renderPronoMatches(){
     const card=document.createElement("div");
     card.className="match-card"+(isLocked?" locked":"");
     let html=`<div class="match-label">${match.label}</div>`;
-    if(res&&res.home!==undefined) html+=`<div class="res-badge">Résultat : ${res.home}–${res.away}</div>`;
+    if(res&&res.home!==undefined) html+=`<div class="res-badge">Résultat : ${res.home}–${res.away}${res.winner?" (TAB)":""}</div>`;
     if(pts!==null){const bg=pts===3?"#d97706":pts===1?"#15803d":"#b91c1c";html+=`<div class="pts-badge" style="background:${bg}">${pts===3?"🎯 +3 pts":pts===1?"✅ +1 pt":"❌ 0 pt"}</div>`;}
     if(isLocked) html+=`<div class="lock-icon">🔒</div>`;
     html+=`<div class="match-row">
-      <div class="team-block"><span class="team-flag">${FLAGS[match.home]||"🏳️"}</span><span class="team-name${tbd&&match.home==="?"?" tbd":""}">${match.home}</span></div>
+      <div class="team-block"><span class="team-flag">${FLAGS[match.home]||"🏳️"}</span><span class="team-name${match.home==="?"?" tbd":""}">${match.home}</span></div>
       <div class="score-block">
         <input class="score-input" type="number" min="0" max="20" value="${pro.home??''}" placeholder="–" ${isLocked||tbd?"disabled":""} oninput="updatePro(${match.id},'home',this.value)">
         <span class="score-sep">:</span>
         <input class="score-input" type="number" min="0" max="20" value="${pro.away??''}" placeholder="–" ${isLocked||tbd?"disabled":""} oninput="updatePro(${match.id},'away',this.value)">
       </div>
-      <div class="team-block right"><span class="team-name${tbd&&match.away==="?"?" tbd":""}">${match.away}</span><span class="team-flag">${FLAGS[match.away]||"🏳️"}</span></div>
+      <div class="team-block right"><span class="team-name${match.away==="?"?" tbd":""}">${match.away}</span><span class="team-flag">${FLAGS[match.away]||"🏳️"}</span></div>
     </div>`;
     if(!isLocked&&!tbd) html+=`<div class="match-actions"><button class="btn-save" onclick="savePro(${match.id})">💾 Sauvegarder</button><button class="btn-lock" onclick="lockPro(${match.id})">🔒 Verrouiller</button></div>`;
     if(tbd) html+=`<div class="tbd-msg">⏳ En attente des qualifiés</div>`;
@@ -530,12 +530,15 @@ window.renderLeaderboard=function(){
   const lb=getLeaderboard();
   const el=document.getElementById("lb-list"); el.innerHTML="";
   lb.forEach((p,i)=>{
+    const isLast=i===lb.length-1&&lb.length>1;
     const row=document.createElement("div");
     row.className="lb-row"+(p.id===currentUserId?" me":"");
-    const isLast=i===lb.length-1&&lb.length>1;
-    const m=i===0?"🥇":i===1?"🥈":i===2?"🥉":isLast?"🥄":`#${i+1}`;
-    const dname=p.name==="Elgreco"?"Elgreco 🕶️ tonton bogoss":p.name;
-    row.innerHTML=`<div class="lb-rank">${m}</div><div class="lb-name">${dname}</div><div class="lb-stats"><span class="lb-stat">🎯 ${p.exact}</span><span class="lb-stat">✅ ${p.good}</span></div><div class="lb-right"><div class="lb-total">${p.total} pts</div><div class="lb-sub">Poules : ${p.base} · Finale : ${p.fin}</div></div>`;
+    const medal=i===0?"🥇":i===1?"🥈":i===2?"🥉":isLast?"🥄":`#${i+1}`;
+    row.innerHTML=`
+      <div class="lb-rank">${medal}</div>
+      <div class="lb-name">${displayName(p.name)}</div>
+      <div class="lb-stats"><span class="lb-stat">🎯 ${p.exact}</span><span class="lb-stat">✅ ${p.good}</span></div>
+      <div class="lb-right"><div class="lb-total">${p.total} pts</div><div class="lb-sub">Poules : ${p.base} · Finale : ${p.fin}</div></div>`;
     el.appendChild(row);
   });
   renderRoundTabs("lb-round-tabs", selRoundLB, g=>{ selRoundLB=g; renderCompareTable(); });
@@ -547,10 +550,10 @@ function renderCompareTable(){
   const parts=Object.values(participants);
   const matches=MATCHES.filter(m=>m.round===selRoundLB);
   const tbl=document.getElementById("compare-table");
-  tbl.querySelector("thead").innerHTML=`<tr><th>Match</th><th>Résultat</th>${parts.map(p=>`<th>${p.name}</th>`).join("")}</tr>`;
+  tbl.querySelector("thead").innerHTML=`<tr><th>Match</th><th>Résultat</th>${parts.map(p=>`<th>${displayName(p.name)}</th>`).join("")}</tr>`;
   tbl.querySelector("tbody").innerHTML=matches.map(match=>{
     const res=results[match.id];
-    const rc=(res&&res.home!==undefined)?`<td class="res">${res.home}–${res.away}</td>`:`<td style="color:#1e293b;text-align:center">?</td>`;
+    const rc=(res&&res.home!==undefined)?`<td class="res">${res.home}–${res.away}${res.winner?" TAB":""}</td>`:`<td style="color:#1e293b;text-align:center">?</td>`;
     const cells=parts.map(p=>{
       const pro=p.pronostics?.[match.id];
       const il=!!(locked[p.id]?.[match.id]);
@@ -579,7 +582,7 @@ window.renderBracket=function(){
       div.className="b-match"+(res?" done":"");
       const hs=res?res.home:"", as=res?res.away:"";
       const hw=w===match.home, aw=w===match.away;
-      const tab = res && res.winner ? `<span class="b-tab">TAB</span>` : "";
+      const tab=res&&res.winner?`<span class="b-tab">TAB</span>`:"";
       div.innerHTML=`
         <div class="b-team ${hw?"win":res?"lose":match.home==="?"?"tbd":""}">
           <span>${FLAGS[match.home]||"🏳️"}</span><span>${match.home}</span>
@@ -612,7 +615,8 @@ function renderAdminMatches(){
   const container=document.getElementById("admin-matches"); container.innerHTML="";
   MATCHES.filter(m=>m.round===selRoundProno).forEach(match=>{
     const res=results[match.id]||{};
-    const isDraw = res.home!==undefined && res.away!==undefined && res.home!=="" && res.away!=="" && parseInt(res.home)===parseInt(res.away);
+    const rh=parseInt(res.home), ra=parseInt(res.away);
+    const isDraw=!isNaN(rh)&&!isNaN(ra)&&res.home!==''&&res.away!==''&&rh===ra;
     const card=document.createElement("div"); card.className="admin-card";
     card.innerHTML=`
       <div class="match-label">${match.label} — ${match.home} vs ${match.away}</div>
@@ -625,17 +629,28 @@ function renderAdminMatches(){
         </div>
         <div class="team-block right"><span class="team-name">${match.away}</span><span class="team-flag">${FLAGS[match.away]||"🏳️"}</span></div>
       </div>
-      ${isDraw ? `
-      <div class="draw-winner-box">
-        <div class="draw-winner-label">⚽ Match nul (TR) — Qui se qualifie ? (tirs au but / prolongations)</div>
-        <div class="draw-winner-options">
-          <button class="draw-btn ${res.winner==='home'?'selected':''}" onclick="setWinner(${match.id},'home')">${FLAGS[match.home]||"🏳️"} ${match.home}</button>
-          <button class="draw-btn ${res.winner==='away'?'selected':''}" onclick="setWinner(${match.id},'away')">${FLAGS[match.away]||"🏳️"} ${match.away}</button>
+      ${isDraw?`
+      <div class="draw-box">
+        <div class="draw-label">⚽ Égalité au temps réglementaire — Qui se qualifie ? (TAB / Prolongations)</div>
+        <div class="draw-options">
+          <button class="draw-btn${res.winner==='home'?' selected':''}" onclick="setWinner(${match.id},'home')">${FLAGS[match.home]||"🏳️"} ${match.home}</button>
+          <button class="draw-btn${res.winner==='away'?' selected':''}" onclick="setWinner(${match.id},'away')">${FLAGS[match.away]||"🏳️"} ${match.away}</button>
         </div>
-      </div>` : ''}`;
+      </div>`:""}`;
     container.appendChild(card);
   });
 }
+
+window.setResult=async function(id,side,val){
+  if(!results[id]) results[id]={};
+  results[id][side]=val;
+  // Reset winner si le score n'est plus nul
+  const rh=parseInt(results[id].home), ra=parseInt(results[id].away);
+  if(!isNaN(rh)&&!isNaN(ra)&&rh!==ra) delete results[id].winner;
+  await save("results",results);
+  propagateWinners();
+  renderAdminMatches();
+};
 
 window.setWinner=async function(id,side){
   if(!results[id]) results[id]={};
@@ -643,13 +658,6 @@ window.setWinner=async function(id,side){
   await save("results",results);
   propagateWinners();
   renderAdminMatches();
-};
-
-window.setResult=async function(id,side,val){
-  if(!results[id]) results[id]={};
-  results[id][side]=val;
-  await save("results",results);
-  propagateWinners();
 };
 
 </script>
